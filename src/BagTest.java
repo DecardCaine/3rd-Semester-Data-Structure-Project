@@ -1,0 +1,100 @@
+
+public class BagTest 
+{
+public static void main(String [] args) 
+{
+	Bag bag1=new Bag();
+	bag1.add("to");
+	bag1.add("be");
+	bag1.add("or");
+	bag1.add("not");
+	bag1.add("to");
+	bag1.add("be");
+System.out.println(" 'to', 'be','or','not','to' ,'be' added to the bag1:");
+System.out.println(bag1);
+System.out.println("Size of the bag1 : "+bag1.Size());
+System.out.println("---------------------");
+System.out.println("Distinct size of our bag1 : "+bag1.DistictSize());
+System.out.println("---------------------");
+System.out.println("Element size of 'to' : "+bag1.ElementSize("to"));
+System.out.println("---------------------");
+System.out.println("Checking the bag if the bag1 contains 'or' : "+bag1.Contains("or"));
+System.out.println("---------------------");
+System.out.println("Clearing the bag1...");
+bag1.clear();
+System.out.println("is the bag1 empty? " +bag1.isEmpty());
+
+bag1.add("to");
+bag1.add("be");
+bag1.add("or");
+bag1.add("not");
+bag1.add("to");
+bag1.add("be");
+System.out.println("---------------------");
+System.out.println(" 'to', 'be','or','not','to','be' added to the bag1 :");
+System.out.println(bag1);
+Bag bag2=new Bag();
+bag2.add("not");
+bag2.add("be");
+bag2.add("or");
+bag2.add("to");
+bag2.add("be");
+bag2.add("to");
+System.out.println("---------------------");
+System.out.println("'not' 'be' 'or' 'to' 'be' 'to' added to bag2");
+System.out.println(bag2);
+System.out.println("---------------------");
+System.out.println("Checking if bag1 equals bag2 : "+bag1.equals(bag2));
+System.out.println("---------------------");
+System.out.println("Removing 'or' from our bag1");
+System.out.println("Is 'or' removeable from bag1 ? : "+bag1.remove("or"));
+System.out.println("Result: "+bag1);
+System.out.println("---------------------");
+System.out.println("Trying to remove 'or' from our bag1:");
+System.out.println("Is 'or' removeable from bag1 ? : "+bag1.remove("or"));
+System.out.println("---------------------");
+System.out.println("Checking if  bag1 and bag2 equals after removing 'or' from bag1 : "+bag1.equals(bag2));
+System.out.println("---------------------");
+Bag bag3=new Bag();
+bag3.add("b");
+bag3.add("b");
+bag3.add("or");
+bag3.add("to");
+bag3.add("to");
+bag3.add("not");
+System.out.println("'not' 'be' 'or' 'to' 'be' 'to' added to bag2");
+System.out.println(bag2);
+System.out.println("Size of bag2 : "+bag2.Size());
+System.out.println("Distict size of bag2 : "+bag2.DistictSize());
+System.out.println("---------------------");
+System.out.println("'b','b','or','to','to','not' added to bag3");
+System.out.println(bag3);
+System.out.println("Size of bag3 : "+bag3.Size());
+System.out.println("Distinct size of bag3 : "+bag3.DistictSize());
+System.out.println("---------------------");
+System.out.println("Checking if bag2 and bag3 equals each other : "+bag2.equals(bag3));
+System.out.println("----------FOR INTEGERS-----------");
+Bag ibag=new Bag();
+ibag.add(4);
+ibag.add(6);
+ibag.add(7);
+ibag.add(2);
+ibag.add(2);
+ibag.add(3);
+System.out.println("'4','6','7','2','2','3' added to the integer bag1: "+ibag);
+System.out.println("");
+Bag ibag2=new Bag();
+ibag2.add(3);
+ibag2.add(2);
+ibag2.add(6);
+ibag2.add(2);
+ibag2.add(7);
+ibag2.add(4);
+System.out.println("'3','2','6','2','7','4' added to the integer bag2: "+ibag2);
+System.out.println("Checking if ibag and ibag2 equal each other :"+ibag.equals(ibag2));
+System.out.println("Removing '4' from integer bag1:"+ibag.remove(4)+"\n"+ibag);
+System.out.println("Checking if  integer bag1 and bag2 are equal after removing '4' from integer bag1: "+ibag.equals(ibag2));
+System.out.println(ibag);
+
+}
+}
